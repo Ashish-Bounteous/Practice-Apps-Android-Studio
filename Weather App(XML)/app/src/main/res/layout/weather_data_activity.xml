@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weatherSceenLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/snow_mobile">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/circle_view"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/weatherPlaceText"
+            style="@style/header_data_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.1"
+            android:paddingHorizontal="10dp"
+            android:text="Chennai"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/weatherDegreeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="23\u2103"
+            android:textColor="@color/white"
+            android:textSize="100sp" />
+
+        <TextView
+            android:id="@+id/weatherTypeText"
+            style="@style/header_data_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Snowy"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#44000000"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+        <TextView
+            android:id="@+id/latInputLabel"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Lat: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/latInputText"
+            style="@style/header_data_style"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="23.23232"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/latInputLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/humidInputText"
+            style="@style/header_data_style"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:text="23.23232"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/humidLabelText"
+            app:layout_constraintTop_toBottomOf="@+id/latInputText" />
+
+        <TextView
+            android:id="@+id/lonInputLabel"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lon: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/latInputText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lonInputText"
+            style="@style/header_data_style"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="23.23232"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/lonInputLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/humidLabelText"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Humid: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/latInputLabel"
+            app:layout_constraintTop_toBottomOf="@+id/latInputLabel" />
+
+        <TextView
+            android:id="@+id/pressureInputLabel"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Pressure: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/latInputText"
+            app:layout_constraintTop_toBottomOf="@+id/lonInputLabel" />
+
+        <TextView
+            android:id="@+id/pressureInputText"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="423"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/pressureInputLabel"
+            app:layout_constraintTop_toBottomOf="@+id/lonInputText" />
+
+        <TextView
+            android:id="@+id/windInputLabel"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Wind:  "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/humidLabelText"
+            app:layout_constraintTop_toBottomOf="@+id/humidLabelText" />
+
+        <TextView
+            android:id="@+id/windInputText"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="23mph"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/windInputLabel"
+            app:layout_constraintTop_toBottomOf="@+id/humidInputText" />
+
+        <TextView
+            android:id="@+id/countryInputLabel"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Country: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/pressureInputLabel"
+            app:layout_constraintTop_toBottomOf="@+id/pressureInputLabel" />
+
+        <TextView
+            android:id="@+id/countryInputText"
+            style="@style/header_data_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="India"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/countryInputLabel"
+            app:layout_constraintTop_toBottomOf="@+id/pressureInputText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle_button"
+        android:text="Search Again"
+        style="@style/header_data_style"
+        app:backgroundTint="@null"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:letterSpacing="0.1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
